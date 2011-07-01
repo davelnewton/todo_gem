@@ -1,6 +1,6 @@
 module Todo
   
-  @@tasks = [:wat, :hey]
+  @@tasks = []
   
   def self.List
     @@tasks.each {|t| puts t}
@@ -8,7 +8,8 @@ module Todo
 
   def self.method_missing(sym)
     if sym.to_s.end_with? '!'
-      @@tasks.delete sym.to_s.chop.to_sym
+      rsym = sym.to_s.chop.to_sym
+      @@tasks.delete rsym if @@tasks.include? rsym
     else
       @@tasks << sym
     end
