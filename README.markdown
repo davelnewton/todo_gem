@@ -1,14 +1,14 @@
 # Todo
  
-This is a simple gem for keep track of to-do list items. 
+This is a simple gem for keeping track of to-do list items. 
  
 ## Installation
  
     $ gem install todo
  
 ## Usage
- 
-To add an item to your to-do list, simply call it on the `Todo` object as if it were a method:
+
+Add items to the to-do list like so: 
  
     Todo.walk_dog
  
